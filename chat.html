@@ -1,32 +1,21 @@
- <!DOCTYPE html>
-<html lang="en">
+<html>
+<script type='text/javascript'>
+function initEmbeddedMessaging() {
+try {
+embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
-
-    <title>chat bot </title>
-   
-  </head>
-  <script type='text/javascript'>
-	function initEmbeddedMessaging() {
-		try {
-			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
-
-			embeddedservice_bootstrap.init(
-				'00DdL000002sBiU',
-				'Superdesk',
-				'https://zeb8-dev-ed.develop.my.site.com/ESWSuperdesk1717081961403',
-				{
-					scrt2URL: 'https://zeb8-dev-ed.develop.my.salesforce-scrt.com'
-				}
-			);
-		} catch (err) {
-			console.error('Error loading Embedded Messaging: ', err);
-		}
-	};
+embeddedservice_bootstrap.init(
+'00DdL000002sBiU',
+'Superdesk',
+'https://zeb8-dev-ed.develop.my.site.com/ESWSuperdesk1717081961403',
+{
+scrt2URL: 'https://zeb8-dev-ed.develop.my.salesforce-scrt.com'
+}
+);
+} catch (err) {
+console.error('Error loading Embedded Messaging: ', err);
+}
+};
 </script>
 <script type='text/javascript' src='https://zeb8-dev-ed.develop.my.site.com/ESWSuperdesk1717081961403/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
-
 </html>
